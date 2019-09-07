@@ -1,0 +1,8 @@
+---
+username: not_the_username
+password: not_the_password
+
+data:
+    dns1: 1.1.1.1
+    dns2: 1.0.0.1
+
