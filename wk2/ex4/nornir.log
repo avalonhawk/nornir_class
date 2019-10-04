@@ -1,0 +1,9 @@
+2019-09-29 13:12:42,245 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 9 hosts
+2019-09-29 13:17:52,088 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:26:37,044 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:51:17,613 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:54:17,508 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:56:39,924 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:57:11,525 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 13:57:59,184 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts
+2019-09-29 14:22:16,564 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'arp_table'} on 6 hosts

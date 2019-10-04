@@ -1,0 +1,705 @@
+2019-09-29 15:25:08,120 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:29:48,919 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:29:51,552 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:30:52,038 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:30:54,704 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:41:39,647 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:41:42,269 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:43:02,981 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:43:05,704 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:43:36,977 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:43:39,632 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:46:32,140 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:46:34,760 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:54:51,814 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:54:54,306 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:58:39,832 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:58:42,504 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 15:58:55,434 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 15:58:58,073 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:06:16,092 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:06:18,721 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:06:21,417 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:09:52,546 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:09:55,201 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:09:57,700 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:11:11,927 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:11:14,389 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:11:17,255 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:12:52,646 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:12:55,343 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:24:10,994 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:24:13,654 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:24:16,321 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:31:04,047 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:31:06,717 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:31:09,374 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:32:03,154 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:32:05,807 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:32:08,512 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:43:46,691 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2019-09-29 16:43:49,359 - nornir.core.task -    ERROR -      start() - Host 'cisco3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 869, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/nornir/plugins/connections/netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 243, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 317, in __init__
+    self._open()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 322, in _open
+    self.establish_connection()
+  File "/home/eweadon/VENV/py3_venv/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 882, in establish_connection
+    raise NetMikoAuthenticationException(msg)
+netmiko.ssh_exception.NetMikoAuthenticationException: Authentication failure: unable to connect cisco_ios cisco3.lasthop.io:22
+Authentication failed.
+
+2019-09-29 16:43:51,917 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
