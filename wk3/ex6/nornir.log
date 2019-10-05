@@ -1,0 +1,19 @@
+2019-10-05 13:18:17,300 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config'} on 2 hosts
+2019-10-05 13:20:37,657 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config'} on 2 hosts
+2019-10-05 13:21:08,098 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': 'config', 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2019-10-05 13:22:26,361 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'running'}}} on 2 hosts
+2019-10-05 13:25:26,895 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 13:41:26,414 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 13:57:15,082 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:01:45,985 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:07:42,109 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:14:49,802 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:17:30,814 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:22:27,378 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:23:07,767 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:25:46,353 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:27:02,523 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:31:16,512 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:35:13,535 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:40:33,537 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts
+2019-10-05 14:53:51,249 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config', 'facts'], 'getters_options': {'config': {'retrieve': 'all'}}} on 2 hosts

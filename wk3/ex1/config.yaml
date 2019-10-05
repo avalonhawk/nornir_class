@@ -1,0 +1,7 @@
+---
+inventory:
+  plugin: nornir.plugins.inventory.simple.SimpleInventory
+  options:
+    host_file: "~/nornir_class/wk3/hosts.yaml"
+    group_file: "~/nornir_class/wk3/hosts.yaml"
+    defaults_file: "~/nornir_class/wk3/defaults.yaml"

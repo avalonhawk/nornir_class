@@ -1,0 +1,18 @@
+---
+eos:
+  connection_options:
+    netmiko:
+      platform: arista_eos
+    napalm:
+      platform: eos
+  data:
+    timezone: CET
+
+sea:
+  data:
+    state: WA
+
+sfo:
+  data:
+    state: CA
+
